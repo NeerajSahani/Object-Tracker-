@@ -1,6 +1,6 @@
 import imutils, cv2, numpy as np
 
-OPENCV_OBJECT_TRACKERS = {
+TRACKERS = {
 	'csrt': cv2.TrackerCSRT_create,
 	'kcf': cv2.TrackerKCF_create,
 	'boosting': cv2.TrackerBoosting_create
@@ -24,7 +24,7 @@ while True:
     if key == ord('s'):
         box = cv2.selectROI("Frame", frame, fromCenter=False, showCrosshair=True)
         if box != (0, 0, 0, 0):
-            tracker = OPENCV_OBJECT_TRACKERS['kcf']()
+            tracker = TRACKERS['kcf']()
             trackers.add(tracker, frame, box)
     elif key == ord('q'):
         break
