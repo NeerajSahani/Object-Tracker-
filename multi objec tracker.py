@@ -6,7 +6,7 @@ OPENCV_OBJECT_TRACKERS = {
 	'boosting': cv2.TrackerBoosting_create
         }
 		
-video = cv2.VideoCapture('D:/Datasets/NIT Datasets/cutvideo.mp4')
+video = cv2.VideoCapture(0)
 trackers = cv2.MultiTracker_create()
 
 while True:
